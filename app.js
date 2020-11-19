@@ -66,3 +66,45 @@
 // // Regular expressions
 // const re1 = /\w+/;
 // const re2 = new RegExp("\\w+");
+
+//Object.prototype
+//Person.prototype
+
+// Person constructor
+// function Person(firstName, lastName, dob) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.birthday = new Date(dob);
+//   // this.calculateAge = function () {
+//   //   const diff = Date.now() - this.birthday.getTime();
+//   //   const ageDate = new Date(diff);
+//   //   return Math.abs(ageDate.getUTCFullYear() - 1970);
+// }
+// // }
+
+// const john = new Person("John", "Doe", "8-12-1990");
+
+// // Calculate age
+// Person.prototype.calculateAge = function () {
+//   const diff = Date.now() - this.birthday.getTime();
+//   const ageDate = new Date(diff);
+//   return Math.abs(ageDate.getUTCFullYear() - 1970);
+// };
+
+// console.log(john.calculateAge());
+
+// // Get full name
+// Person.prototype.getFullName = function () {
+//   return `${this.firstName} ${this.lastName}`;
+// };
+
+// console.log(john.getFullName);
+
+// // Gets married
+// Person.prototype.getsMarried = function (newLastName) {
+//   this.lastName = newLastName;
+// };
+
+// john.getsMarried("Smith");
+
+// console.log(john.hasOwnProperty("firstName")); // you can access them by the __proto__ property
